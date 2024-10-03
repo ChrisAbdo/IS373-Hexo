@@ -1,4 +1,4 @@
-name: Test and Deploy Hexo
+name: Test and Deploy Hexo Site
 
 on:
   push:
@@ -19,9 +19,9 @@ jobs:
 
       # Set up Node.js environment
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
-          node-version: "20" # Specify your Node.js version
+          node-version: "22" # Specify your Node.js version
           cache: "npm"
 
       # Install dependencies
@@ -46,23 +46,23 @@ jobs:
       - name: Checkout Playwright test repository
         uses: actions/checkout@v3
         with:
-          repository: your-username/playwright-test-repo
-          path: playwright-test-repo
+          repository: dfianuale/playwright-IS373
+          path: playwright-IS373
 
       # Install Playwright dependencies
       - name: Install Playwright dependencies
-        working-directory: playwright-test-repo
+        working-directory: playwright-IS373
         run: npm ci
 
       # Install Playwright browsers
       - name: Install Playwright browsers
-        working-directory: playwright-test-repo
+        working-directory: playwright-IS373
         run: npx playwright install
 
       # Run the Playwright tests against the running Hexo site
       - name: Run Playwright tests
-        working-directory: playwright-test-repo
-        run: npx playwright test --config=path-to-your-playwright-config
+        working-directory: playwright-IS373
+        run: npx playwright test --config=./Playwright/playwright.config.ts
 
       # Stop the Hexo server
       - name: Stop Hexo server
@@ -82,7 +82,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version: "22"
           cache: "npm"
 
       - name: Install dependencies
