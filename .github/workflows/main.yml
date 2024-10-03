@@ -52,7 +52,7 @@ jobs:
 
       - name: Install Playwright browsers
         working-directory: IS373-PW
-        run: npx playwright install
+        run: npx playwright install --with-deps
 
       - name: Run Playwright tests
         working-directory: IS373-PW
