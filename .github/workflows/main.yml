@@ -1,6 +1,8 @@
 name: Test and Deploy Hexo
 
 on:
+  permissions:
+    contents: write
   push:
     branches:
       - main
@@ -79,4 +81,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./blog/public # Hexo outputs the generated files to the 'public' directory
+          publish_dir: ./blog/public
+          publish_branch: gh-pages
