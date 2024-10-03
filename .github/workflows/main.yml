@@ -45,3 +45,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          github_token: ${{ secrets.ACTIONS_SECRET }}
+          publish_dir: ./blog/public # Hexo outputs the generated files to the 'public' directory inside 'blog'
