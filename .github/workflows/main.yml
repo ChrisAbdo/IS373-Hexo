@@ -37,8 +37,11 @@ jobs:
           hexo generate
 
       # Deploy to GitHub Pages
+      # - name: Deploy to GitHub Pages
+      #   uses: peaceiris/actions-gh-pages@v3
+      #   with:
+      #     github_token: ${{ secrets.ACTIONS_SECRET }}
+      #     publish_dir: ./blog/public # Hexo outputs the generated files to the 'public' directory inside 'blog'
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.ACTIONS_SECRET }}
-          publish_dir: ./blog/public # Hexo outputs the generated files to the 'public' directory inside 'blog'
+        id: deployment
+        uses: actions/deploy-pages@v4
