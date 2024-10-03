@@ -35,6 +35,11 @@ jobs:
           cd blog
           npx hexo generate
 
+      - name: Create .nojekyll file
+        run: |
+          cd blog/public
+          touch .nojekyll
+
       - name: Checkout Playwright test repository
         uses: actions/checkout@v3
         with:
@@ -77,6 +82,11 @@ jobs:
         run: |
           cd blog
           npx hexo generate
+
+      - name: Create .nojekyll file
+        run: |
+          cd blog/public
+          touch .nojekyll
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
