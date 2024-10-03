@@ -1,4 +1,4 @@
-name: Test and Deploy using GitHub Actions.
+name: Test and Deploy using GitHub Actions
 
 on:
   push:
@@ -40,6 +40,12 @@ jobs:
           cd blog/public
           touch .nojekyll
 
+      - name: Start Hexo server
+        run: |
+          cd blog
+          npx hexo server &
+          sleep 5  # Give the server a few seconds to start
+
       - name: Checkout Playwright test repository
         uses: actions/checkout@v3
         with:
@@ -57,6 +63,10 @@ jobs:
       - name: Run Playwright tests
         working-directory: IS373-PW
         run: npx playwright test
+
+      - name: Stop Hexo server
+        if: always()
+        run: pkill -f "hexo server"
 
   deploy:
     runs-on: ubuntu-latest
