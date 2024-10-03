@@ -8,43 +8,43 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
-  build-and-test:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout the Hexo repository again (to prevent loss of state)
       - name: Checkout Hexo repository
         uses: actions/checkout@v3
 
-      # Set up Node.js environment
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20" # Make sure it matches your environment
+          node-version: "20"
 
-      # Install Hexo and dependencies
       - name: Install Hexo and dependencies
         run: |
           cd blog
           npm install hexo-cli -g
           npm install
 
-      # Generate the static website
       - name: Generate Hexo site
         run: |
           cd blog
           hexo generate
 
-      # Deploy to GitHub Pages
-      # - name: Deploy to GitHub Pages
-      #   uses: peaceiris/actions-gh-pages@v3
-      #   with:
-      #     github_token: ${{ secrets.ACTIONS_SECRET }}
-      #     publish_dir: ./blog/public # Hexo outputs the generated files to the 'public' directory inside 'blog'
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "./blog/public"
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          github_token: ${{ secrets.ACTIONS_SECRET }}
-          publish_dir: ./blog/public # Hexo outputs the generated files to the 'public' directory inside 'blog'
