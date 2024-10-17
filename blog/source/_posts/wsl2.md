@@ -1,5 +1,5 @@
 ---
-title: Windows Subsystem for Linux 2 (WSL2)
+title: WSL2
 ---
 
 # Windows Subsystem for Linux 2 (WSL2)
