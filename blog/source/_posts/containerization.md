@@ -1,3 +1,7 @@
+---
+title: Containerization
+---
+
 # Introduction to Containerization
 
 Containerization is a revolutionary approach to software development and deployment that has transformed the way applications are built, shipped, and run. This guide will provide an in-depth look at containerization, its benefits, and how it compares to traditional virtualization methods.

@@ -1,3 +1,7 @@
+---
+title: Windows Subsystem for Linux 2 (WSL2)
+---
+
 # Windows Subsystem for Linux 2 (WSL2)
 
 ![WSL2 Logo](https://devblogs.microsoft.com/commandline/wp-content/uploads/sites/33/2019/05/LogoDesign-1024x486.png)
