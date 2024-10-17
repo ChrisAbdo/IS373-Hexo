@@ -1,5 +1,5 @@
 ---
-title: Example Post
+title: Ex. Post
 ---
 
 # Example Post
