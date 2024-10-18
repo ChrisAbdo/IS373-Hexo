@@ -72,7 +72,7 @@
     <article id="post-Docker Commands" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/IS373-Hexo/2024/10/18/Docker%20Commands/" class="article-date">
-  <time class="dt-published" datetime="2024-10-18T05:12:32.671Z" itemprop="datePublished">2024-10-18</time>
+  <time class="dt-published" datetime="2024-10-18T14:05:22.822Z" itemprop="datePublished">2024-10-18</time>
 </a>
     
   </div>
@@ -123,7 +123,81 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://chrisabdo.github.io/IS373-Hexo/2024/10/18/Docker%20Commands/" data-id="cm2e9x31e0000dnp3bpxc5r1e" data-title="Common Docker Commands" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://chrisabdo.github.io/IS373-Hexo/2024/10/18/Docker%20Commands/" data-id="cm2esyb1d0000dgq60uj079rb" data-title="Common Docker Commands" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Docker vs Virtual Machines" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/IS373-Hexo/2024/10/18/Docker%20vs%20Virtual%20Machines/" class="article-date">
+  <time class="dt-published" datetime="2024-10-18T14:05:22.822Z" itemprop="datePublished">2024-10-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/IS373-Hexo/2024/10/18/Docker%20vs%20Virtual%20Machines/">Docker vs. Virtual Machines</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Docker-vs-Virtual-Machines"><a href="#Docker-vs-Virtual-Machines" class="headerlink" title="Docker vs. Virtual Machines"></a>Docker vs. Virtual Machines</h1><p>Docker containers and virtual machines (VMs) are both technologies used for virtualization, but they operate on different principles and are suited for different use cases. This page outlines the key differences between Docker and VMs in terms of architecture, performance, isolation, and resource consumption.</p>
+<h2 id="1-Architecture"><a href="#1-Architecture" class="headerlink" title="1. Architecture"></a>1. Architecture</h2><h3 id="Docker-Containers"><a href="#Docker-Containers" class="headerlink" title="Docker Containers"></a>Docker Containers</h3><ul>
+<li><strong>Shared Kernel</strong>: Docker containers share the host operating system’s kernel, allowing them to run more efficiently. Each container runs as an isolated process within the host OS.</li>
+<li><strong>Lightweight</strong>: Because they utilize the host OS kernel, containers are lightweight. They only package the application and its dependencies, which reduces overhead.</li>
+</ul>
+<h3 id="Virtual-Machines"><a href="#Virtual-Machines" class="headerlink" title="Virtual Machines"></a>Virtual Machines</h3><ul>
+<li><strong>Hypervisor Layer</strong>: VMs run on a hypervisor, which allows multiple operating systems to run on a single physical machine. Each VM has its own complete operating system, along with a virtual copy of the hardware.</li>
+<li><strong>Full OS</strong>: Each VM includes not just the application but also the full OS, which increases the size and complexity.</li>
+</ul>
+<h2 id="2-Performance"><a href="#2-Performance" class="headerlink" title="2. Performance"></a>2. Performance</h2><h3 id="Docker-Containers-1"><a href="#Docker-Containers-1" class="headerlink" title="Docker Containers"></a>Docker Containers</h3><ul>
+<li><strong>Faster Startup</strong>: Containers can start almost instantly, as they do not require booting a full OS. This makes them ideal for applications that need to scale quickly.</li>
+<li><strong>Efficient Resource Use</strong>: Containers consume fewer resources, allowing for higher density on the host machine. You can run more containers than VMs on the same hardware.</li>
+</ul>
+<h3 id="Virtual-Machines-1"><a href="#Virtual-Machines-1" class="headerlink" title="Virtual Machines"></a>Virtual Machines</h3><ul>
+<li><strong>Longer Boot Time</strong>: VMs typically take longer to start because they need to boot up a full operating system.</li>
+<li><strong>Higher Resource Consumption</strong>: Each VM requires its own resources for the OS, which can limit the number of VMs you can run on a single host.</li>
+</ul>
+<h2 id="3-Isolation"><a href="#3-Isolation" class="headerlink" title="3. Isolation"></a>3. Isolation</h2><h3 id="Docker-Containers-2"><a href="#Docker-Containers-2" class="headerlink" title="Docker Containers"></a>Docker Containers</h3><ul>
+<li><strong>Process-Level Isolation</strong>: Containers provide process-level isolation, which is sufficient for many applications but can be a security concern. If a vulnerability exists in the host OS, it could potentially affect all containers running on that host.</li>
+<li><strong>Less Overhead</strong>: The lightweight nature of containers allows for quick scaling and deployment but at a potential cost to security and isolation.</li>
+</ul>
+<h3 id="Virtual-Machines-2"><a href="#Virtual-Machines-2" class="headerlink" title="Virtual Machines"></a>Virtual Machines</h3><ul>
+<li><strong>Stronger Isolation</strong>: VMs provide hardware-level isolation, as each VM runs a separate operating system. This makes VMs more suitable for running untrusted applications or different applications with conflicting dependencies.</li>
+<li><strong>Security</strong>: The stronger isolation means that issues in one VM are less likely to affect others, providing better security for sensitive applications.</li>
+</ul>
+<h2 id="4-Use-Cases"><a href="#4-Use-Cases" class="headerlink" title="4. Use Cases"></a>4. Use Cases</h2><h3 id="When-to-Use-Docker"><a href="#When-to-Use-Docker" class="headerlink" title="When to Use Docker"></a>When to Use Docker</h3><ul>
+<li><strong>Microservices Architecture</strong>: Ideal for applications designed as microservices, where different components can be deployed independently.</li>
+<li><strong>Development and Testing</strong>: Great for rapid development cycles where environments need to be spun up and down quickly.</li>
+<li><strong>CI&#x2F;CD Pipelines</strong>: Suitable for continuous integration and deployment, allowing teams to quickly test and deploy applications.</li>
+</ul>
+<h3 id="When-to-Use-Virtual-Machines"><a href="#When-to-Use-Virtual-Machines" class="headerlink" title="When to Use Virtual Machines"></a>When to Use Virtual Machines</h3><ul>
+<li><strong>Legacy Applications</strong>: Best for running legacy applications that require a specific operating system or environment.</li>
+<li><strong>Security-Sensitive Applications</strong>: Appropriate for applications that demand strong isolation due to security concerns.</li>
+<li><strong>Multi-Tenant Environments</strong>: Ideal for hosting different environments on the same hardware without risking interference between applications.</li>
+</ul>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>In summary, Docker containers offer efficiency, speed, and resource savings, making them a popular choice for modern application development and deployment. Virtual machines provide stronger isolation and security at the cost of increased resource usage and slower performance. The decision between using Docker or VMs should be based on the specific needs of your applications and the environment in which they will run.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://chrisabdo.github.io/IS373-Hexo/2024/10/18/Docker%20vs%20Virtual%20Machines/" data-id="cm2esyb1g0001dgq67uqha93t" data-title="Docker vs. Virtual Machines" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -138,7 +212,7 @@
     <article id="post-containerization" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/IS373-Hexo/2024/10/18/containerization/" class="article-date">
-  <time class="dt-published" datetime="2024-10-18T05:12:32.671Z" itemprop="datePublished">2024-10-18</time>
+  <time class="dt-published" datetime="2024-10-18T14:05:22.822Z" itemprop="datePublished">2024-10-18</time>
 </a>
     
   </div>
@@ -290,7 +364,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://chrisabdo.github.io/IS373-Hexo/2024/10/18/containerization/" data-id="cm2e9x31h0001dnp38yzvg6ux" data-title="Containerization" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://chrisabdo.github.io/IS373-Hexo/2024/10/18/containerization/" data-id="cm2esyb1i0002dgq65915eeao" data-title="Containerization" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -305,7 +379,7 @@
     <article id="post-kernel" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/IS373-Hexo/2024/10/18/kernel/" class="article-date">
-  <time class="dt-published" datetime="2024-10-18T05:12:32.671Z" itemprop="datePublished">2024-10-18</time>
+  <time class="dt-published" datetime="2024-10-18T14:05:22.822Z" itemprop="datePublished">2024-10-18</time>
 </a>
     
   </div>
@@ -326,7 +400,7 @@
       
         <h1 id="Introduction-to-Kernels"><a href="#Introduction-to-Kernels" class="headerlink" title="Introduction to Kernels"></a>Introduction to Kernels</h1><h2 id="Understanding-Kernels-Managing-System-Resources-and-Hardware"><a href="#Understanding-Kernels-Managing-System-Resources-and-Hardware" class="headerlink" title="Understanding Kernels: Managing System Resources and Hardware"></a>Understanding Kernels: Managing System Resources and Hardware</h2><p>A kernel is the core component of an operating system (OS) that manages system resources and hardware interactions. It serves as a bridge between applications and the physical hardware of a computer, ensuring that software can effectively utilize the hardware without needing to manage low-level operations directly.</p>
 <h2 id="Key-Functions-of-Kernels"><a href="#Key-Functions-of-Kernels" class="headerlink" title="Key Functions of Kernels"></a>Key Functions of Kernels</h2><h1 id="Resource-Management-The-kernel-allocates-resources-such-as-CPU-time-memory-and-I-O-devices-to-various-processes"><a href="#Resource-Management-The-kernel-allocates-resources-such-as-CPU-time-memory-and-I-O-devices-to-various-processes" class="headerlink" title="Resource Management: The kernel allocates resources such as CPU time, memory, and I&#x2F;O devices to various processes."></a>Resource Management: The kernel allocates resources such as CPU time, memory, and I&#x2F;O devices to various processes.</h1><h1 id="Hardware-Abstraction-It-provides-a-consistent-interface-for-applications-to-interact-with-different-hardware-devices"><a href="#Hardware-Abstraction-It-provides-a-consistent-interface-for-applications-to-interact-with-different-hardware-devices" class="headerlink" title="Hardware Abstraction: It provides a consistent interface for applications to interact with different hardware devices."></a>Hardware Abstraction: It provides a consistent interface for applications to interact with different hardware devices.</h1><h1 id="Process-Management-The-kernel-handles-the-creation-scheduling-and-termination-of-processes"><a href="#Process-Management-The-kernel-handles-the-creation-scheduling-and-termination-of-processes" class="headerlink" title="Process Management: The kernel handles the creation, scheduling, and termination of processes."></a>Process Management: The kernel handles the creation, scheduling, and termination of processes.</h1><h1 id="Memory-Management-It-manages-the-system’s-memory-including-RAM-and-cache-ensuring-that-processes-have-access-to-memory-as-needed"><a href="#Memory-Management-It-manages-the-system’s-memory-including-RAM-and-cache-ensuring-that-processes-have-access-to-memory-as-needed" class="headerlink" title="Memory Management: It manages the system’s memory, including RAM and cache, ensuring that processes have access to memory as needed."></a>Memory Management: It manages the system’s memory, including RAM and cache, ensuring that processes have access to memory as needed.</h1><h1 id="Device-Management-The-kernel-communicates-with-hardware-devices-through-drivers-which-translate-OS-commands-into-device-specific-operations"><a href="#Device-Management-The-kernel-communicates-with-hardware-devices-through-drivers-which-translate-OS-commands-into-device-specific-operations" class="headerlink" title="Device Management: The kernel communicates with hardware devices through drivers, which translate OS commands into device-specific operations."></a>Device Management: The kernel communicates with hardware devices through drivers, which translate OS commands into device-specific operations.</h1><h2 id="Types-of-Kernels"><a href="#Types-of-Kernels" class="headerlink" title="Types of Kernels"></a>Types of Kernels</h2><h1 id="1-Monolithic-Kernels"><a href="#1-Monolithic-Kernels" class="headerlink" title="1. Monolithic Kernels"></a>1. Monolithic Kernels</h1><p>A monolithic kernel includes all the operating system services within a single large block of code running in a single address space. It can provide high performance due to minimal overhead from inter-process communication.</p>
-<p>Example: Linux kernel.</p>
+<p>Example for the linux kernel: Linux kernel.</p>
 <p>&#x2F;&#x2F; Example of a monolithic kernel syscall in C<br>#include &lt;linux&#x2F;kernel.h&gt;<br>#include &lt;linux&#x2F;module.h&gt;</p>
 <p>int init_module(void) {<br>    printk(KERN_INFO “Hello, Kernel!\n”);<br>    return 0;<br>}</p>
 <h1 id="2-Microkernels"><a href="#2-Microkernels" class="headerlink" title="2. Microkernels"></a>2. Microkernels</h1><p>Microkernels minimize the amount of code that runs in the kernel mode, providing only the most essential services, while running other services in user space. This design enhances stability and security.</p>
@@ -359,81 +433,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://chrisabdo.github.io/IS373-Hexo/2024/10/18/kernel/" data-id="cm2e9x31i0002dnp31u792i64" data-title="Kernels" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Docker vs Virtual Machines" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/IS373-Hexo/2024/10/18/Docker%20vs%20Virtual%20Machines/" class="article-date">
-  <time class="dt-published" datetime="2024-10-18T05:12:32.671Z" itemprop="datePublished">2024-10-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/IS373-Hexo/2024/10/18/Docker%20vs%20Virtual%20Machines/">Docker vs. Virtual Machines</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="Docker-vs-Virtual-Machines"><a href="#Docker-vs-Virtual-Machines" class="headerlink" title="Docker vs. Virtual Machines"></a>Docker vs. Virtual Machines</h1><p>Docker containers and virtual machines (VMs) are both technologies used for virtualization, but they operate on different principles and are suited for different use cases. This page outlines the key differences between Docker and VMs in terms of architecture, performance, isolation, and resource consumption.</p>
-<h2 id="1-Architecture"><a href="#1-Architecture" class="headerlink" title="1. Architecture"></a>1. Architecture</h2><h3 id="Docker-Containers"><a href="#Docker-Containers" class="headerlink" title="Docker Containers"></a>Docker Containers</h3><ul>
-<li><strong>Shared Kernel</strong>: Docker containers share the host operating system’s kernel, allowing them to run more efficiently. Each container runs as an isolated process within the host OS.</li>
-<li><strong>Lightweight</strong>: Because they utilize the host OS kernel, containers are lightweight. They only package the application and its dependencies, which reduces overhead.</li>
-</ul>
-<h3 id="Virtual-Machines"><a href="#Virtual-Machines" class="headerlink" title="Virtual Machines"></a>Virtual Machines</h3><ul>
-<li><strong>Hypervisor Layer</strong>: VMs run on a hypervisor, which allows multiple operating systems to run on a single physical machine. Each VM has its own complete operating system, along with a virtual copy of the hardware.</li>
-<li><strong>Full OS</strong>: Each VM includes not just the application but also the full OS, which increases the size and complexity.</li>
-</ul>
-<h2 id="2-Performance"><a href="#2-Performance" class="headerlink" title="2. Performance"></a>2. Performance</h2><h3 id="Docker-Containers-1"><a href="#Docker-Containers-1" class="headerlink" title="Docker Containers"></a>Docker Containers</h3><ul>
-<li><strong>Faster Startup</strong>: Containers can start almost instantly, as they do not require booting a full OS. This makes them ideal for applications that need to scale quickly.</li>
-<li><strong>Efficient Resource Use</strong>: Containers consume fewer resources, allowing for higher density on the host machine. You can run more containers than VMs on the same hardware.</li>
-</ul>
-<h3 id="Virtual-Machines-1"><a href="#Virtual-Machines-1" class="headerlink" title="Virtual Machines"></a>Virtual Machines</h3><ul>
-<li><strong>Longer Boot Time</strong>: VMs typically take longer to start because they need to boot up a full operating system.</li>
-<li><strong>Higher Resource Consumption</strong>: Each VM requires its own resources for the OS, which can limit the number of VMs you can run on a single host.</li>
-</ul>
-<h2 id="3-Isolation"><a href="#3-Isolation" class="headerlink" title="3. Isolation"></a>3. Isolation</h2><h3 id="Docker-Containers-2"><a href="#Docker-Containers-2" class="headerlink" title="Docker Containers"></a>Docker Containers</h3><ul>
-<li><strong>Process-Level Isolation</strong>: Containers provide process-level isolation, which is sufficient for many applications but can be a security concern. If a vulnerability exists in the host OS, it could potentially affect all containers running on that host.</li>
-<li><strong>Less Overhead</strong>: The lightweight nature of containers allows for quick scaling and deployment but at a potential cost to security and isolation.</li>
-</ul>
-<h3 id="Virtual-Machines-2"><a href="#Virtual-Machines-2" class="headerlink" title="Virtual Machines"></a>Virtual Machines</h3><ul>
-<li><strong>Stronger Isolation</strong>: VMs provide hardware-level isolation, as each VM runs a separate operating system. This makes VMs more suitable for running untrusted applications or different applications with conflicting dependencies.</li>
-<li><strong>Security</strong>: The stronger isolation means that issues in one VM are less likely to affect others, providing better security for sensitive applications.</li>
-</ul>
-<h2 id="4-Use-Cases"><a href="#4-Use-Cases" class="headerlink" title="4. Use Cases"></a>4. Use Cases</h2><h3 id="When-to-Use-Docker"><a href="#When-to-Use-Docker" class="headerlink" title="When to Use Docker"></a>When to Use Docker</h3><ul>
-<li><strong>Microservices Architecture</strong>: Ideal for applications designed as microservices, where different components can be deployed independently.</li>
-<li><strong>Development and Testing</strong>: Great for rapid development cycles where environments need to be spun up and down quickly.</li>
-<li><strong>CI&#x2F;CD Pipelines</strong>: Suitable for continuous integration and deployment, allowing teams to quickly test and deploy applications.</li>
-</ul>
-<h3 id="When-to-Use-Virtual-Machines"><a href="#When-to-Use-Virtual-Machines" class="headerlink" title="When to Use Virtual Machines"></a>When to Use Virtual Machines</h3><ul>
-<li><strong>Legacy Applications</strong>: Best for running legacy applications that require a specific operating system or environment.</li>
-<li><strong>Security-Sensitive Applications</strong>: Appropriate for applications that demand strong isolation due to security concerns.</li>
-<li><strong>Multi-Tenant Environments</strong>: Ideal for hosting different environments on the same hardware without risking interference between applications.</li>
-</ul>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>In summary, Docker containers offer efficiency, speed, and resource savings, making them a popular choice for modern application development and deployment. Virtual machines provide stronger isolation and security at the cost of increased resource usage and slower performance. The decision between using Docker or VMs should be based on the specific needs of your applications and the environment in which they will run.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://chrisabdo.github.io/IS373-Hexo/2024/10/18/Docker%20vs%20Virtual%20Machines/" data-id="cm2e9x31j0003dnp3d78ohves" data-title="Docker vs. Virtual Machines" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://chrisabdo.github.io/IS373-Hexo/2024/10/18/kernel/" data-id="cm2esyb1i0003dgq64gr2czir" data-title="Kernels" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -448,7 +448,7 @@
     <article id="post-virtualization" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/IS373-Hexo/2024/10/18/virtualization/" class="article-date">
-  <time class="dt-published" datetime="2024-10-18T05:12:32.671Z" itemprop="datePublished">2024-10-18</time>
+  <time class="dt-published" datetime="2024-10-18T14:05:22.822Z" itemprop="datePublished">2024-10-18</time>
 </a>
     
   </div>
@@ -658,7 +658,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://chrisabdo.github.io/IS373-Hexo/2024/10/18/virtualization/" data-id="cm2e9x31k0004dnp310a4crmt" data-title="Virtualization" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://chrisabdo.github.io/IS373-Hexo/2024/10/18/virtualization/" data-id="cm2esyb1j0004dgq6gsqd1gqb" data-title="Virtualization" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -673,7 +673,7 @@
     <article id="post-wsl2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/IS373-Hexo/2024/10/18/wsl2/" class="article-date">
-  <time class="dt-published" datetime="2024-10-18T05:12:32.671Z" itemprop="datePublished">2024-10-18</time>
+  <time class="dt-published" datetime="2024-10-18T14:05:22.822Z" itemprop="datePublished">2024-10-18</time>
 </a>
     
   </div>
@@ -803,7 +803,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://chrisabdo.github.io/IS373-Hexo/2024/10/18/wsl2/" data-id="cm2e9x31k0005dnp3ea5p4o4b" data-title="WSL2" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://chrisabdo.github.io/IS373-Hexo/2024/10/18/wsl2/" data-id="cm2esyb1j0005dgq66ehj8v4y" data-title="WSL2" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -850,15 +850,15 @@
           </li>
         
           <li>
+            <a href="/IS373-Hexo/2024/10/18/Docker%20vs%20Virtual%20Machines/">Docker vs. Virtual Machines</a>
+          </li>
+        
+          <li>
             <a href="/IS373-Hexo/2024/10/18/containerization/">Containerization</a>
           </li>
         
           <li>
             <a href="/IS373-Hexo/2024/10/18/kernel/">Kernels</a>
-          </li>
-        
-          <li>
-            <a href="/IS373-Hexo/2024/10/18/Docker%20vs%20Virtual%20Machines/">Docker vs. Virtual Machines</a>
           </li>
         
           <li>
