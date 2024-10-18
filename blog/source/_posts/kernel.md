@@ -1,5 +1,5 @@
 ---
-title: Kernels
+Title: Kernels
 ---
 
 # Introduction to Kernels
