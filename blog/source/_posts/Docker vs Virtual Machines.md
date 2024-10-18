@@ -1,5 +1,6 @@
-# Docker vs. Virtual Machines
-
+---
+ Docker vs. Virtual Machines
+---
 Docker containers and virtual machines (VMs) are both technologies used for virtualization, but they operate on different principles and are suited for different use cases. This page outlines the key differences between Docker and VMs in terms of architecture, performance, isolation, and resource consumption.
 
 ## 1. Architecture
