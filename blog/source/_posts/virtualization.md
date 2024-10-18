@@ -47,7 +47,7 @@ sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils vir
 virt-manager # This opens a GUI to manage VMs using full virtualization
 2. Paravirtualization
 Definition:
-In paravirtualization, the guest OS is aware of the fact that it is running in a virtualized environment. The OS is modified to interact directly with the hypervisor, which avoids the need to emulate hardware, resulting in better performance.
+In paravirtualization, the guest OS is aware of itself running within the virtualized environment. The OS is modified to interact directly with the hypervisor, which avoids the need to emulate hardware, resulting in better performance.
 
 How It Works:
 The guest OS is aware of the hypervisor and has specific modifications that allow it to communicate directly with the hypervisor using special API calls, known as hypercalls. These hypercalls are much faster than the trapping and emulation techniques used in full virtualization.
