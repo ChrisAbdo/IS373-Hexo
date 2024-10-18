@@ -1,6 +1,10 @@
-## Understanding Kernels: Managing System Resources and Hardware
+---
+title: Kernels
+---
 
-## Introduction to Kernels
+# Introduction to Kernels
+
+## Understanding Kernels: Managing System Resources and Hardware
 
 A kernel is the core component of an operating system (OS) that manages system resources and hardware interactions. It serves as a bridge between applications and the physical hardware of a computer, ensuring that software can effectively utilize the hardware without needing to manage low-level operations directly.
 
