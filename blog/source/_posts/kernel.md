@@ -24,7 +24,7 @@ A kernel is the core component of an operating system (OS) that manages system r
 
 # 1. Monolithic Kernels
 
-A monolithic kernel includes all the operating system services within a single large block of code running in a single address space. It can provide high performance due to minimal overhead from inter-process communication.
+A monolithic kernel includes all aspects of the operating system services within a single large block of code running in a single address space. It can provide high performance due to minimal overhead from inter-process communication.
 
 Example for the linux kernel: Linux kernel.
 
