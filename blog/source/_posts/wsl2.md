@@ -98,7 +98,7 @@ WSL2 provides excellent support for virtualization and containerization:
   ```
   wsl --shutdown
   ```
-- Check the official Microsoft documentation for specific error messages.
+- Check the official Microsoft documentation for specific error messages
 
 ## Additional Resources
 
