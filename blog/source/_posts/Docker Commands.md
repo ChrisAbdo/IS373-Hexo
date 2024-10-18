@@ -1,4 +1,8 @@
-# Common Docker Commands
+---
+title: Common Docker Commands
+---
+
+# Docker vs. Virtual Machines
 
 ## Table of Contents
 
