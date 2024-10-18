@@ -69,76 +69,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-Docker Commands" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/IS373-Hexo/2024/10/18/Docker%20Commands/" class="article-date">
-  <time class="dt-published" datetime="2024-10-18T14:07:37.208Z" itemprop="datePublished">2024-10-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/IS373-Hexo/2024/10/18/Docker%20Commands/">Common Docker Commands</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="Docker-vs-Virtual-Machines"><a href="#Docker-vs-Virtual-Machines" class="headerlink" title="Docker vs. Virtual Machines"></a>Docker vs. Virtual Machines</h1><h2 id="Table-of-Contents"><a href="#Table-of-Contents" class="headerlink" title="Table of Contents"></a>Table of Contents</h2><ol>
-<li><a href="#introduction">Introduction</a></li>
-<li><a href="#basic-commands">Basic Commands</a></li>
-<li><a href="#container-management">Container Management</a></li>
-<li><a href="#image-management">Image Management</a></li>
-<li><a href="#networking-commands">Networking Commands</a></li>
-<li><a href="#docker-compose-commands">Docker Compose Commands</a></li>
-<li><a href="#conclusion">Conclusion</a></li>
-</ol>
-<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Docker commands are essential for managing containers and images effectively. This guide provides a comprehensive list of common Docker commands that every developer should know, along with brief explanations.</p>
-<h2 id="Basic-Commands"><a href="#Basic-Commands" class="headerlink" title="Basic Commands"></a>Basic Commands</h2><p>Here are some foundational commands for interacting with Docker:</p>
-<h3 id="Check-Docker-version"><a href="#Check-Docker-version" class="headerlink" title="Check Docker version"></a>Check Docker version</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker --version</span><br></pre></td></tr></table></figure>
-
-<h3 id="Display-Docker-help"><a href="#Display-Docker-help" class="headerlink" title="Display Docker help"></a>Display Docker help</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker --<span class="built_in">help</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="Container-Management"><a href="#Container-Management" class="headerlink" title="Container Management"></a>Container Management</h2><p>Commands to manage Docker containers:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># List running containers</span></span><br><span class="line">docker ps</span><br><span class="line"></span><br><span class="line"><span class="comment"># List all containers (including stopped ones)</span></span><br><span class="line">docker ps -a</span><br><span class="line"></span><br><span class="line"><span class="comment"># Run a container</span></span><br><span class="line">docker run &lt;image_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Stop a running container</span></span><br><span class="line">docker stop &lt;container_id&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Start a stopped container</span></span><br><span class="line">docker start &lt;container_id&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Restart a container</span></span><br><span class="line">docker restart &lt;container_id&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Remove a container</span></span><br><span class="line">docker <span class="built_in">rm</span> &lt;container_id&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># View container logs</span></span><br><span class="line">docker logs &lt;container_id&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Execute a command inside a running container</span></span><br><span class="line">docker <span class="built_in">exec</span> -it &lt;container_id&gt; &lt;<span class="built_in">command</span>&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="Image-Management"><a href="#Image-Management" class="headerlink" title="Image Management"></a>Image Management</h2><p>Commands for handling Docker images:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># List Docker images</span></span><br><span class="line">docker images</span><br><span class="line"></span><br><span class="line"><span class="comment"># Pull an image from Docker Hub</span></span><br><span class="line">docker pull &lt;image_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Build an image from a Dockerfile</span></span><br><span class="line">docker build -t &lt;image_name&gt;:&lt;tag&gt; &lt;path&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Remove a Docker image</span></span><br><span class="line">docker rmi &lt;image_id&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Tag an image</span></span><br><span class="line">docker tag &lt;image_id&gt; &lt;new_image_name&gt;:&lt;tag&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Push an image to a Docker registry</span></span><br><span class="line">docker push &lt;image_name&gt;:&lt;tag&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="Networking-Commands"><a href="#Networking-Commands" class="headerlink" title="Networking Commands"></a>Networking Commands</h2><p>Commands to manage Docker networking:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># List Docker networks</span></span><br><span class="line">docker network <span class="built_in">ls</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Create a new network</span></span><br><span class="line">docker network create &lt;network_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Connect a container to a network</span></span><br><span class="line">docker network connect &lt;network_name&gt; &lt;container_id&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Disconnect a container from a network</span></span><br><span class="line">docker network disconnect &lt;network_name&gt; &lt;container_id&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="Docker-Compose-Commands"><a href="#Docker-Compose-Commands" class="headerlink" title="Docker Compose Commands"></a>Docker Compose Commands</h2><p>Common commands for managing multi-container applications with Docker Compose:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Start services defined in docker-compose.yml</span></span><br><span class="line">docker-compose up</span><br><span class="line"></span><br><span class="line"><span class="comment"># Start services in detached mode</span></span><br><span class="line">docker-compose up -d</span><br><span class="line"></span><br><span class="line"><span class="comment"># Stop services</span></span><br><span class="line">docker-compose down</span><br><span class="line"></span><br><span class="line"><span class="comment"># View logs for services</span></span><br><span class="line">docker-compose logs</span><br><span class="line"></span><br><span class="line"><span class="comment"># Scale services (e.g., run 3 instances of a service)</span></span><br><span class="line">docker-compose up --scale &lt;service_name&gt;=&lt;number&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Mastering these common Docker commands will significantly enhance your ability to manage containers and images efficiently. Whether you are deploying applications, managing environments, or collaborating with teams, these commands form the foundation of your Docker workflow.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://chrisabdo.github.io/IS373-Hexo/2024/10/18/Docker%20Commands/" data-id="cm2et16pr0000denk86t1htv6" data-title="Common Docker Commands" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
     <article id="post-Docker vs Virtual Machines" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/IS373-Hexo/2024/10/18/Docker%20vs%20Virtual%20Machines/" class="article-date">
-  <time class="dt-published" datetime="2024-10-18T14:07:37.208Z" itemprop="datePublished">2024-10-18</time>
+  <time class="dt-published" datetime="2024-10-18T14:08:54.617Z" itemprop="datePublished">2024-10-18</time>
 </a>
     
   </div>
@@ -197,7 +131,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://chrisabdo.github.io/IS373-Hexo/2024/10/18/Docker%20vs%20Virtual%20Machines/" data-id="cm2et16pu0001denk3cw00onw" data-title="Docker vs. Virtual Machines" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://chrisabdo.github.io/IS373-Hexo/2024/10/18/Docker%20vs%20Virtual%20Machines/" data-id="cm2et2uyw0001hips5dl8c4bq" data-title="Docker vs. Virtual Machines" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -212,7 +146,7 @@
     <article id="post-containerization" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/IS373-Hexo/2024/10/18/containerization/" class="article-date">
-  <time class="dt-published" datetime="2024-10-18T14:07:37.208Z" itemprop="datePublished">2024-10-18</time>
+  <time class="dt-published" datetime="2024-10-18T14:08:54.617Z" itemprop="datePublished">2024-10-18</time>
 </a>
     
   </div>
@@ -364,7 +298,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://chrisabdo.github.io/IS373-Hexo/2024/10/18/containerization/" data-id="cm2et16pw0002denk53tba9tn" data-title="Containerization" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://chrisabdo.github.io/IS373-Hexo/2024/10/18/containerization/" data-id="cm2et2uyx0002hips4zswdmi3" data-title="Containerization" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -379,7 +313,7 @@
     <article id="post-kernel" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/IS373-Hexo/2024/10/18/kernel/" class="article-date">
-  <time class="dt-published" datetime="2024-10-18T14:07:37.208Z" itemprop="datePublished">2024-10-18</time>
+  <time class="dt-published" datetime="2024-10-18T14:08:54.617Z" itemprop="datePublished">2024-10-18</time>
 </a>
     
   </div>
@@ -433,7 +367,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://chrisabdo.github.io/IS373-Hexo/2024/10/18/kernel/" data-id="cm2et16pw0003denk8ihzc8nu" data-title="Kernels" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://chrisabdo.github.io/IS373-Hexo/2024/10/18/kernel/" data-id="cm2et2uyy0003hips6ac8gpin" data-title="Kernels" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -448,7 +382,7 @@
     <article id="post-virtualization" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/IS373-Hexo/2024/10/18/virtualization/" class="article-date">
-  <time class="dt-published" datetime="2024-10-18T14:07:37.208Z" itemprop="datePublished">2024-10-18</time>
+  <time class="dt-published" datetime="2024-10-18T14:08:54.617Z" itemprop="datePublished">2024-10-18</time>
 </a>
     
   </div>
@@ -509,7 +443,7 @@
 </tr>
 </tbody></table>
 <h1 id="Installing-KVM-and-QEMU-for-Full-Virtualization-Ubuntu-Example"><a href="#Installing-KVM-and-QEMU-for-Full-Virtualization-Ubuntu-Example" class="headerlink" title="Installing KVM and QEMU for Full Virtualization (Ubuntu Example)"></a>Installing KVM and QEMU for Full Virtualization (Ubuntu Example)</h1><p>sudo apt update<br>sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager</p>
-<h1 id="Starting-Virtual-Machine"><a href="#Starting-Virtual-Machine" class="headerlink" title="Starting Virtual Machine"></a>Starting Virtual Machine</h1><p>virt-manager # This opens a GUI to manage VMs using full virtualization<br>2. Paravirtualization<br>Definition:<br>In paravirtualization, the guest OS is aware of the fact that it is running in a virtualized environment. The OS is modified to interact directly with the hypervisor, which avoids the need to emulate hardware, resulting in better performance.</p>
+<h1 id="Starting-Virtual-Machine"><a href="#Starting-Virtual-Machine" class="headerlink" title="Starting Virtual Machine"></a>Starting Virtual Machine</h1><p>virt-manager # This opens a GUI to manage VMs using full virtualization<br>2. Paravirtualization<br>Definition:<br>In paravirtualization, the guest OS is aware of itself running within the virtualized environment. The OS is modified to interact directly with the hypervisor, which avoids the need to emulate hardware, resulting in better performance.</p>
 <p>How It Works:<br>The guest OS is aware of the hypervisor and has specific modifications that allow it to communicate directly with the hypervisor using special API calls, known as hypercalls. These hypercalls are much faster than the trapping and emulation techniques used in full virtualization.</p>
 <p>Examples of Paravirtualization:<br>Xen with PV Guests<br>VMware ESXi (when used with VMware Tools)<br>Advantages:<br>Better performance than full virtualization since there’s no need to emulate hardware.<br>Reduced overhead due to efficient communication between guest and hypervisor.<br>Disadvantages:<br>The guest OS must be modified, which makes it more complex to manage and limits portability.<br>Diagram:<br>Here’s a diagram for paravirtualization:</p>
 <p>lua<br>Copy code<br>|————————–|</p>
@@ -658,7 +592,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://chrisabdo.github.io/IS373-Hexo/2024/10/18/virtualization/" data-id="cm2et16px0004denk8mpw52bz" data-title="Virtualization" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://chrisabdo.github.io/IS373-Hexo/2024/10/18/virtualization/" data-id="cm2et2uyy0004hipsgkw46kt4" data-title="Virtualization" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -673,7 +607,7 @@
     <article id="post-wsl2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/IS373-Hexo/2024/10/18/wsl2/" class="article-date">
-  <time class="dt-published" datetime="2024-10-18T14:07:37.208Z" itemprop="datePublished">2024-10-18</time>
+  <time class="dt-published" datetime="2024-10-18T14:08:54.617Z" itemprop="datePublished">2024-10-18</time>
 </a>
     
   </div>
@@ -803,7 +737,73 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://chrisabdo.github.io/IS373-Hexo/2024/10/18/wsl2/" data-id="cm2et16py0005denkhgcj8ss4" data-title="WSL2" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://chrisabdo.github.io/IS373-Hexo/2024/10/18/wsl2/" data-id="cm2et2uyz0005hips0ek3ej65" data-title="WSL2" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Docker Commands" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/IS373-Hexo/2024/10/18/Docker%20Commands/" class="article-date">
+  <time class="dt-published" datetime="2024-10-18T14:08:54.613Z" itemprop="datePublished">2024-10-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/IS373-Hexo/2024/10/18/Docker%20Commands/">Common Docker Commands</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Docker-vs-Virtual-Machines"><a href="#Docker-vs-Virtual-Machines" class="headerlink" title="Docker vs. Virtual Machines"></a>Docker vs. Virtual Machines</h1><h2 id="Table-of-Contents"><a href="#Table-of-Contents" class="headerlink" title="Table of Contents"></a>Table of Contents</h2><ol>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#basic-commands">Basic Commands</a></li>
+<li><a href="#container-management">Container Management</a></li>
+<li><a href="#image-management">Image Management</a></li>
+<li><a href="#networking-commands">Networking Commands</a></li>
+<li><a href="#docker-compose-commands">Docker Compose Commands</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ol>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Docker commands are essential for managing containers and images effectively. This guide provides a comprehensive list of common Docker commands that every developer should know, along with brief explanations.</p>
+<h2 id="Basic-Commands"><a href="#Basic-Commands" class="headerlink" title="Basic Commands"></a>Basic Commands</h2><p>Here are some foundational commands for interacting with Docker:</p>
+<h3 id="Check-Docker-version"><a href="#Check-Docker-version" class="headerlink" title="Check Docker version"></a>Check Docker version</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker --version</span><br></pre></td></tr></table></figure>
+
+<h3 id="Display-Docker-help"><a href="#Display-Docker-help" class="headerlink" title="Display Docker help"></a>Display Docker help</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker --<span class="built_in">help</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Container-Management"><a href="#Container-Management" class="headerlink" title="Container Management"></a>Container Management</h2><p>Commands to manage Docker containers:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># List running containers</span></span><br><span class="line">docker ps</span><br><span class="line"></span><br><span class="line"><span class="comment"># List all containers (including stopped ones)</span></span><br><span class="line">docker ps -a</span><br><span class="line"></span><br><span class="line"><span class="comment"># Run a container</span></span><br><span class="line">docker run &lt;image_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Stop a running container</span></span><br><span class="line">docker stop &lt;container_id&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Start a stopped container</span></span><br><span class="line">docker start &lt;container_id&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Restart a container</span></span><br><span class="line">docker restart &lt;container_id&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Remove a container</span></span><br><span class="line">docker <span class="built_in">rm</span> &lt;container_id&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># View container logs</span></span><br><span class="line">docker logs &lt;container_id&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Execute a command inside a running container</span></span><br><span class="line">docker <span class="built_in">exec</span> -it &lt;container_id&gt; &lt;<span class="built_in">command</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Image-Management"><a href="#Image-Management" class="headerlink" title="Image Management"></a>Image Management</h2><p>Commands for handling Docker images:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># List Docker images</span></span><br><span class="line">docker images</span><br><span class="line"></span><br><span class="line"><span class="comment"># Pull an image from Docker Hub</span></span><br><span class="line">docker pull &lt;image_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Build an image from a Dockerfile</span></span><br><span class="line">docker build -t &lt;image_name&gt;:&lt;tag&gt; &lt;path&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Remove a Docker image</span></span><br><span class="line">docker rmi &lt;image_id&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Tag an image</span></span><br><span class="line">docker tag &lt;image_id&gt; &lt;new_image_name&gt;:&lt;tag&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Push an image to a Docker registry</span></span><br><span class="line">docker push &lt;image_name&gt;:&lt;tag&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Networking-Commands"><a href="#Networking-Commands" class="headerlink" title="Networking Commands"></a>Networking Commands</h2><p>Commands to manage Docker networking:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># List Docker networks</span></span><br><span class="line">docker network <span class="built_in">ls</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Create a new network</span></span><br><span class="line">docker network create &lt;network_name&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Connect a container to a network</span></span><br><span class="line">docker network connect &lt;network_name&gt; &lt;container_id&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Disconnect a container from a network</span></span><br><span class="line">docker network disconnect &lt;network_name&gt; &lt;container_id&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Docker-Compose-Commands"><a href="#Docker-Compose-Commands" class="headerlink" title="Docker Compose Commands"></a>Docker Compose Commands</h2><p>Common commands for managing multi-container applications with Docker Compose:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Start services defined in docker-compose.yml</span></span><br><span class="line">docker-compose up</span><br><span class="line"></span><br><span class="line"><span class="comment"># Start services in detached mode</span></span><br><span class="line">docker-compose up -d</span><br><span class="line"></span><br><span class="line"><span class="comment"># Stop services</span></span><br><span class="line">docker-compose down</span><br><span class="line"></span><br><span class="line"><span class="comment"># View logs for services</span></span><br><span class="line">docker-compose logs</span><br><span class="line"></span><br><span class="line"><span class="comment"># Scale services (e.g., run 3 instances of a service)</span></span><br><span class="line">docker-compose up --scale &lt;service_name&gt;=&lt;number&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Mastering these common Docker commands will significantly enhance your ability to manage containers and images efficiently. Whether you are deploying applications, managing environments, or collaborating with teams, these commands form the foundation of your Docker workflow.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://chrisabdo.github.io/IS373-Hexo/2024/10/18/Docker%20Commands/" data-id="cm2et2uys0000hips5lmw7jt4" data-title="Common Docker Commands" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -846,10 +846,6 @@
       <ul>
         
           <li>
-            <a href="/IS373-Hexo/2024/10/18/Docker%20Commands/">Common Docker Commands</a>
-          </li>
-        
-          <li>
             <a href="/IS373-Hexo/2024/10/18/Docker%20vs%20Virtual%20Machines/">Docker vs. Virtual Machines</a>
           </li>
         
@@ -863,6 +859,10 @@
         
           <li>
             <a href="/IS373-Hexo/2024/10/18/virtualization/">Virtualization</a>
+          </li>
+        
+          <li>
+            <a href="/IS373-Hexo/2024/10/18/wsl2/">WSL2</a>
           </li>
         
       </ul>

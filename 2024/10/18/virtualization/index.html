@@ -13,8 +13,8 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Introduction to VirtualizationVirtualization is the process of creating a virtual version of a system, such as hardware platforms, storage devices, and networks. It allows a single physical machine to">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2024-10-18T14:07:37.208Z">
-<meta property="article:modified_time" content="2024-10-18T14:07:37.208Z">
+<meta property="article:published_time" content="2024-10-18T14:08:54.617Z">
+<meta property="article:modified_time" content="2024-10-18T14:08:54.617Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -74,7 +74,7 @@
         <section id="main"><article id="post-virtualization" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/IS373-Hexo/2024/10/18/virtualization/" class="article-date">
-  <time class="dt-published" datetime="2024-10-18T14:07:37.208Z" itemprop="datePublished">2024-10-18</time>
+  <time class="dt-published" datetime="2024-10-18T14:08:54.617Z" itemprop="datePublished">2024-10-18</time>
 </a>
     
   </div>
@@ -135,7 +135,7 @@
 </tr>
 </tbody></table>
 <h1 id="Installing-KVM-and-QEMU-for-Full-Virtualization-Ubuntu-Example"><a href="#Installing-KVM-and-QEMU-for-Full-Virtualization-Ubuntu-Example" class="headerlink" title="Installing KVM and QEMU for Full Virtualization (Ubuntu Example)"></a>Installing KVM and QEMU for Full Virtualization (Ubuntu Example)</h1><p>sudo apt update<br>sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager</p>
-<h1 id="Starting-Virtual-Machine"><a href="#Starting-Virtual-Machine" class="headerlink" title="Starting Virtual Machine"></a>Starting Virtual Machine</h1><p>virt-manager # This opens a GUI to manage VMs using full virtualization<br>2. Paravirtualization<br>Definition:<br>In paravirtualization, the guest OS is aware of the fact that it is running in a virtualized environment. The OS is modified to interact directly with the hypervisor, which avoids the need to emulate hardware, resulting in better performance.</p>
+<h1 id="Starting-Virtual-Machine"><a href="#Starting-Virtual-Machine" class="headerlink" title="Starting Virtual Machine"></a>Starting Virtual Machine</h1><p>virt-manager # This opens a GUI to manage VMs using full virtualization<br>2. Paravirtualization<br>Definition:<br>In paravirtualization, the guest OS is aware of itself running within the virtualized environment. The OS is modified to interact directly with the hypervisor, which avoids the need to emulate hardware, resulting in better performance.</p>
 <p>How It Works:<br>The guest OS is aware of the hypervisor and has specific modifications that allow it to communicate directly with the hypervisor using special API calls, known as hypercalls. These hypercalls are much faster than the trapping and emulation techniques used in full virtualization.</p>
 <p>Examples of Paravirtualization:<br>Xen with PV Guests<br>VMware ESXi (when used with VMware Tools)<br>Advantages:<br>Better performance than full virtualization since there’s no need to emulate hardware.<br>Reduced overhead due to efficient communication between guest and hypervisor.<br>Disadvantages:<br>The guest OS must be modified, which makes it more complex to manage and limits portability.<br>Diagram:<br>Here’s a diagram for paravirtualization:</p>
 <p>lua<br>Copy code<br>|————————–|</p>
@@ -284,7 +284,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://chrisabdo.github.io/IS373-Hexo/2024/10/18/virtualization/" data-id="cm2et16px0004denk8mpw52bz" data-title="Virtualization" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://chrisabdo.github.io/IS373-Hexo/2024/10/18/virtualization/" data-id="cm2et2uyy0004hipsgkw46kt4" data-title="Virtualization" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -344,10 +344,6 @@
       <ul>
         
           <li>
-            <a href="/IS373-Hexo/2024/10/18/Docker%20Commands/">Common Docker Commands</a>
-          </li>
-        
-          <li>
             <a href="/IS373-Hexo/2024/10/18/Docker%20vs%20Virtual%20Machines/">Docker vs. Virtual Machines</a>
           </li>
         
@@ -361,6 +357,10 @@
         
           <li>
             <a href="/IS373-Hexo/2024/10/18/virtualization/">Virtualization</a>
+          </li>
+        
+          <li>
+            <a href="/IS373-Hexo/2024/10/18/wsl2/">WSL2</a>
           </li>
         
       </ul>
