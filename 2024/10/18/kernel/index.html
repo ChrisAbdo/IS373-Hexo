@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Kernels | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Introduction to KernelsUnderstanding Kernels: Managing System Resources and HardwareA kernel is the core component of an operating system (OS) that manages system resources and hardware interactions.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kernels">
+<meta property="og:url" content="https://chrisabdo.github.io/IS373-Hexo/2024/10/18/kernel/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Introduction to KernelsUnderstanding Kernels: Managing System Resources and HardwareA kernel is the core component of an operating system (OS) that manages system resources and hardware interactions.">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-10-18T01:27:06.273Z">
+<meta property="article:modified_time" content="2024-10-18T01:27:06.273Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/IS373-Hexo/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/IS373-Hexo/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/IS373-Hexo/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/IS373-Hexo/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/IS373-Hexo/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/IS373-Hexo/">Home</a>
+        
+          <a class="main-nav-link" href="/IS373-Hexo/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/IS373-Hexo/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://chrisabdo.github.io/IS373-Hexo"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-kernel" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/IS373-Hexo/2024/10/18/kernel/" class="article-date">
+  <time class="dt-published" datetime="2024-10-18T01:27:06.273Z" itemprop="datePublished">2024-10-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Kernels
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Introduction-to-Kernels"><a href="#Introduction-to-Kernels" class="headerlink" title="Introduction to Kernels"></a>Introduction to Kernels</h1><h2 id="Understanding-Kernels-Managing-System-Resources-and-Hardware"><a href="#Understanding-Kernels-Managing-System-Resources-and-Hardware" class="headerlink" title="Understanding Kernels: Managing System Resources and Hardware"></a>Understanding Kernels: Managing System Resources and Hardware</h2><p>A kernel is the core component of an operating system (OS) that manages system resources and hardware interactions. It serves as a bridge between applications and the physical hardware of a computer, ensuring that software can effectively utilize the hardware without needing to manage low-level operations directly.</p>
+<h2 id="Key-Functions-of-Kernels"><a href="#Key-Functions-of-Kernels" class="headerlink" title="Key Functions of Kernels"></a>Key Functions of Kernels</h2><h1 id="Resource-Management-The-kernel-allocates-resources-such-as-CPU-time-memory-and-I-O-devices-to-various-processes"><a href="#Resource-Management-The-kernel-allocates-resources-such-as-CPU-time-memory-and-I-O-devices-to-various-processes" class="headerlink" title="Resource Management: The kernel allocates resources such as CPU time, memory, and I&#x2F;O devices to various processes."></a>Resource Management: The kernel allocates resources such as CPU time, memory, and I&#x2F;O devices to various processes.</h1><h1 id="Hardware-Abstraction-It-provides-a-consistent-interface-for-applications-to-interact-with-different-hardware-devices"><a href="#Hardware-Abstraction-It-provides-a-consistent-interface-for-applications-to-interact-with-different-hardware-devices" class="headerlink" title="Hardware Abstraction: It provides a consistent interface for applications to interact with different hardware devices."></a>Hardware Abstraction: It provides a consistent interface for applications to interact with different hardware devices.</h1><h1 id="Process-Management-The-kernel-handles-the-creation-scheduling-and-termination-of-processes"><a href="#Process-Management-The-kernel-handles-the-creation-scheduling-and-termination-of-processes" class="headerlink" title="Process Management: The kernel handles the creation, scheduling, and termination of processes."></a>Process Management: The kernel handles the creation, scheduling, and termination of processes.</h1><h1 id="Memory-Management-It-manages-the-system’s-memory-including-RAM-and-cache-ensuring-that-processes-have-access-to-memory-as-needed"><a href="#Memory-Management-It-manages-the-system’s-memory-including-RAM-and-cache-ensuring-that-processes-have-access-to-memory-as-needed" class="headerlink" title="Memory Management: It manages the system’s memory, including RAM and cache, ensuring that processes have access to memory as needed."></a>Memory Management: It manages the system’s memory, including RAM and cache, ensuring that processes have access to memory as needed.</h1><h1 id="Device-Management-The-kernel-communicates-with-hardware-devices-through-drivers-which-translate-OS-commands-into-device-specific-operations"><a href="#Device-Management-The-kernel-communicates-with-hardware-devices-through-drivers-which-translate-OS-commands-into-device-specific-operations" class="headerlink" title="Device Management: The kernel communicates with hardware devices through drivers, which translate OS commands into device-specific operations."></a>Device Management: The kernel communicates with hardware devices through drivers, which translate OS commands into device-specific operations.</h1><h2 id="Types-of-Kernels"><a href="#Types-of-Kernels" class="headerlink" title="Types of Kernels"></a>Types of Kernels</h2><h1 id="1-Monolithic-Kernels"><a href="#1-Monolithic-Kernels" class="headerlink" title="1. Monolithic Kernels"></a>1. Monolithic Kernels</h1><p>A monolithic kernel includes all the operating system services within a single large block of code running in a single address space. It can provide high performance due to minimal overhead from inter-process communication.</p>
+<p>Example: Linux kernel.</p>
+<p>&#x2F;&#x2F; Example of a monolithic kernel syscall in C<br>#include &lt;linux&#x2F;kernel.h&gt;<br>#include &lt;linux&#x2F;module.h&gt;</p>
+<p>int init_module(void) {<br>    printk(KERN_INFO “Hello, Kernel!\n”);<br>    return 0;<br>}</p>
+<h1 id="2-Microkernels"><a href="#2-Microkernels" class="headerlink" title="2. Microkernels"></a>2. Microkernels</h1><p>Microkernels minimize the amount of code that runs in the kernel mode, providing only the most essential services, while running other services in user space. This design enhances stability and security.</p>
+<p>Example: Minix.</p>
+<p>&#x2F;&#x2F; Example of a simple microkernel process<br>void process() {<br>    while (1) {<br>        &#x2F;&#x2F; Process tasks<br>    }<br>}</p>
+<h1 id="3-Hybrid-Kernels"><a href="#3-Hybrid-Kernels" class="headerlink" title="3. Hybrid Kernels"></a>3. Hybrid Kernels</h1><p>Hybrid kernels combine elements of both monolithic and microkernels, allowing some services to run in kernel space while others run in user space.</p>
+<p>Example: Windows NT kernel.</p>
+<h2 id="Kernel-Services-to-the-Operating-System"><a href="#Kernel-Services-to-the-Operating-System" class="headerlink" title="Kernel Services to the Operating System"></a>Kernel Services to the Operating System</h2><h1 id="1-System-Calls"><a href="#1-System-Calls" class="headerlink" title="1. System Calls"></a>1. System Calls</h1><p>Kernels provide system calls as an interface for applications to request services from the operating system. Common system calls include:</p>
+<p>File Operations: open(), read(), write(), close().<br>Process Control: fork(), exec(), wait().<br>Networking: socket(), bind(), listen().</p>
+<p>Example of a system call in a Linux terminal:</p>
+<p>bash<br>$ touch myfile.txt   # Creates a file using the ‘open’ syscall<br>$ ls myfile.txt      # Lists the file, invoking another syscall</p>
+<h1 id="2-Interrupt-Handling"><a href="#2-Interrupt-Handling" class="headerlink" title="2. Interrupt Handling"></a>2. Interrupt Handling</h1><p>Kernels manage hardware interrupts that signal the CPU to stop executing the current process and execute a specific routine to handle the event (e.g., a key press, a mouse movement).</p>
+<p>Example: Handling keyboard interrupts in Linux.</p>
+<p>void keyboard_interrupt_handler() {<br>    &#x2F;&#x2F; Read from keyboard port and process the input<br>}</p>
+<h1 id="3-Scheduling"><a href="#3-Scheduling" class="headerlink" title="3. Scheduling"></a>3. Scheduling</h1><p>Kernels implement scheduling algorithms to manage the execution of processes, deciding which process runs at any given time based on factors such as priority and fairness.</p>
+<p>Example: Round-Robin Scheduling Algorithm.</p>
+<p>void round_robin_scheduler() {<br>    while (1) {<br>        for (each process in ready queue) {<br>            &#x2F;&#x2F; Allocate CPU time to process<br>        }<br>    }<br>}</p>
+<h2 id="Advanced-Aspects-of-Kernels"><a href="#Advanced-Aspects-of-Kernels" class="headerlink" title="Advanced Aspects of Kernels"></a>Advanced Aspects of Kernels</h2><h1 id="1-Kernel-Space-vs-User-Space"><a href="#1-Kernel-Space-vs-User-Space" class="headerlink" title="1. Kernel Space vs. User Space"></a>1. Kernel Space vs. User Space</h1><p>The kernel operates in kernel space, a protected memory area where it has complete control over the system. User applications run in user space, which restricts direct access to hardware and memory for security and stability.</p>
+<p>Diagram:</p>
+<p>SQL</p>
+<p>+——————+<br>|   User Space     |<br>|                  |<br>| Application A    |<br>| Application B    |<br>+——————+<br>|                  |<br>|   Kernel Space   |<br>|                  |<br>|    Kernel Code   |<br>|   Device Drivers  |<br>+——————+<br>|  Hardware Layer  |<br>+——————+</p>
+<h1 id="2-Virtual-Memory-Management"><a href="#2-Virtual-Memory-Management" class="headerlink" title="2. Virtual Memory Management"></a>2. Virtual Memory Management</h1><p>Kernels implement virtual memory to allow processes to use memory addresses independently of actual physical memory. This helps isolate processes and improve security.</p>
+<p>Example: Address space mapping.</p>
+<p>&#x2F;&#x2F; Pseudo-code for virtual memory mapping<br>void map_virtual_to_physical(int virtual_address, int physical_address) {<br>    page_table[virtual_address] &#x3D; physical_address;<br>}</p>
+<h1 id="3-Kernel-Modules"><a href="#3-Kernel-Modules" class="headerlink" title="3. Kernel Modules"></a>3. Kernel Modules</h1><p>Many modern kernels support loadable kernel modules (LKMs), which allow the dynamic loading and unloading of code into the kernel at runtime.</p>
+<p>Example: Loading a module in Linux.</p>
+<p>bash<br>$ sudo insmod mymodule.ko  # Load the module<br>$ sudo rmmod mymodule      # Unload the module</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Kernels are fundamental to the functioning of modern operating systems, providing essential services, managing resources, and facilitating communication between software and hardware. Understanding the various kernel types, services, and advanced features helps appreciate the complexity and efficiency of computer systems. As technology evolves, kernels continue to adapt, becoming more modular and secure, paving the way for future developments in operating system design.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://chrisabdo.github.io/IS373-Hexo/2024/10/18/kernel/" data-id="cm2e1v5vi0002hgqc4dtp5khp" data-title="Kernels" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/IS373-Hexo/2024/10/18/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+    <a href="/IS373-Hexo/2024/10/18/test/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Ex. Post</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/IS373-Hexo/archives/2024/10/">October 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/IS373-Hexo/2024/10/18/containerization/">Containerization</a>
+          </li>
+        
+          <li>
+            <a href="/IS373-Hexo/2024/10/18/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/IS373-Hexo/2024/10/18/kernel/">Kernels</a>
+          </li>
+        
+          <li>
+            <a href="/IS373-Hexo/2024/10/18/test/">Ex. Post</a>
+          </li>
+        
+          <li>
+            <a href="/IS373-Hexo/2024/10/18/virtualization/">Virtualization</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/IS373-Hexo/" class="mobile-nav-link">Home</a>
+  
+    <a href="/IS373-Hexo/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/IS373-Hexo/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/IS373-Hexo/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/IS373-Hexo/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
