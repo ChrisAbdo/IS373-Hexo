@@ -8,7 +8,7 @@ Virtualization is the process of creating a virtual version of a system, such as
 
 1. Full Virtualization
 Definition:
-Full virtualization provides a complete simulation of the underlying hardware, allowing an unmodified operating system to run in a virtual machine (VM) without modification. The guest OS is unaware it is being virtualized and interacts with virtual hardware as if it were the physical hardware.
+Full virtualization provides a complete simulation of the underlying hardware, which allows an unmodified operating system to run within a virtual machine (VM) without modification. The guest OS isn't aware of it being virtualized and interacts with virtual hardware as if it were the physical hardware.
 
 How It Works:
 In full virtualization, the hypervisor (also known as a Virtual Machine Monitor or VMM) emulates all the underlying hardware. This means the guest OS thinks it is interacting with a full physical machine. The hypervisor translates the OS’s high-level requests into low-level instructions that the actual hardware understands.
