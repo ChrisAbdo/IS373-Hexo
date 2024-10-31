@@ -1,4 +1,7 @@
-# Persona: Alumni
+---
+title:  Alumni Persona
+---
+#  Alumni Persona
 
 ## Michael Chen
 

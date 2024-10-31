@@ -1,4 +1,7 @@
-# Persona: Current Student
+---
+title: Current Student Persona
+---
+# Current Student Persona
 
 ## Sarah Martinez
 
